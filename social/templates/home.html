@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Tweets</h1>
+
+{% for tweet in tweets %}
+{{tweet}} <br><br>
+{% endfor%}
+{% endblock %}
