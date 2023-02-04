@@ -18,8 +18,11 @@ class UserAdmin(admin.ModelAdmin):
     model = User
 
     # Just display usernames on admin page
-    fields = ["username"]
+    fields = ["username", "email", "first_name", "last_name"]
+    list_display = ["username", "email"]
     inlines = [ProfileInline]
+    ordering = ["username"]
+    search_fields = ["username", "email"]
 
 
 # unregister inital user
